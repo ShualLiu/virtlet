@@ -328,7 +328,7 @@ function start_virtlet {
         opts+=(--compat)
     fi
     docker exec virtlet-build "${remote_project_dir}/_output/virtletctl" gen "${opts[@]}" |
-        kubectl apply -f -
+        kubectl apply --validate=false -f -
 }
 
 function virtlet_subdir {
