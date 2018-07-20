@@ -213,8 +213,7 @@ function vcmd {
     cd "${project_dir}"
     if [[ ! ${VIRTLET_SKIP_RSYNC} ]]; then
         local -a filters=(
-            --filter '- /vendor/'
-            --filter '- /_output/'
+             --filter '- /_output/'
         )
         if [[ ! ${rsync_git} ]]; then
             filters+=(--filter '- /.git/')
