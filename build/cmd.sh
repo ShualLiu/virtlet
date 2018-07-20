@@ -435,15 +435,22 @@ function build_internal {
         exit 1
     fi
     #install_vendor_internal
-   echo "xxx"
+    echo "start build"
     ldflags="$(get_ldflags)"
     mkdir -p "${project_dir}/_output"
+    echo "building virtlet"
     go build -i -o "${project_dir}/_output/virtlet" -ldflags "${ldflags}" ./cmd/virtlet
+    echo "building virtletctl"
     go build -i -o "${project_dir}/_output/virtletctl" -ldflags "${ldflags}" ./cmd/virtletctl
+    echo "building virtletctl for mac"
     GOOS=darwin go build -i -o "${project_dir}/_output/virtletctl.darwin" -ldflags "${ldflags}" ./cmd/virtletctl
+    echo "building vmwrapper"
     go build -i -o "${project_dir}/_output/vmwrapper" ./cmd/vmwrapper
+    echo "building flexvolume_driver"
     go build -i -o "${project_dir}/_output/flexvolume_driver" ./cmd/flexvolume_driver
+    echo "e2e testing"
     go test -i -c -o "${project_dir}/_output/virtlet-e2e-tests" ./tests/e2e
+    echo "building longevity"
     go build -i -o "${project_dir}/_output/virtlet-longevity-tests" -ldflags "${ldflags}" ./cmd/longevity
 }
 
