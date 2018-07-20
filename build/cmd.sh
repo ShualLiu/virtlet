@@ -434,7 +434,8 @@ function build_internal {
         echo >&2 "${bindata_dir} changed, please re-run ${0} update-bindata"
         exit 1
     fi
-    install_vendor_internal
+    #install_vendor_internal
+   echo "xxx"
     ldflags="$(get_ldflags)"
     mkdir -p "${project_dir}/_output"
     go build -i -o "${project_dir}/_output/virtlet" -ldflags "${ldflags}" ./cmd/virtlet
