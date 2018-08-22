@@ -81,10 +81,10 @@
 			"revisionTime": "2018-07-17T15:39:03Z"
 		},
 		{
-			"checksumSHA1": "u1HRVG+AjRiIxRlSTlnrKLOhenw=",
+			"checksumSHA1": "JAIRyd3OferZY2UodHNd9P+8ORU=",
 			"path": "github.com/Mirantis/virtlet/pkg/libvirttools",
-			"revision": "11ba7801db3e33103b1ad0dcc3616eb1e9eb6263",
-			"revisionTime": "2018-07-17T15:39:03Z"
+			"revision": "f727374e30fc442818b02a65763e2dac2286f2a3",
+			"revisionTime": "2018-08-22T03:44:05Z"
 		},
 		{
 			"checksumSHA1": "Hi5+g9VWiR4lQnt1KT52JjatMbw=",
